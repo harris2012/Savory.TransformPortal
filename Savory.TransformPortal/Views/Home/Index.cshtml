@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Savory Transform</title>
+    <link href="http://static.savory.cn/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="http://static.savory.cn/bootstrap/3.3.7/css/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="http://static.savory.cn/icheck-bootstrap/1.0.7/icheck-bootstrap.min.css" rel="stylesheet" />
+    <link href="http://static.savory.cn/codemirror/5.19.0/lib/codemirror.css" rel="stylesheet" />
+</head>
+<body>
+    <div ng-app="transform">
+        <div class="navbar navbar-default navbar-static-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" ui-sref="welcome">Savory Transform</a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a ui-sref="transforms">模版</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div ui-view></div>
+            <hr />
+            <footer>
+                <p>&copy; @DateTime.Now.Year - Savory Transform</p>
+            </footer>
+        </div>
+    </div>
+
+    <script src="http://static.savory.cn/jquery/3.1.1/jquery-3.1.1.min.js"></script>
+    <script src="http://static.savory.cn/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="http://static.savory.cn/angularjs/1.6.4/angular.min.js"></script>
+
+    <script src="http://static.savory.cn/angularjs/1.6.4/angular-resource.min.js"></script>
+    <script src="http://static.savory.cn/angular-ui-router/1.0.5/angular-ui-router.min.js"></script>
+    <script src="http://static.savory.cn/angular-ui-bootstrap/2.5.0/js/ui-bootstrap-tpls.min.js"></script>
+
+    <script src="http://static.savory.cn/codemirror/5.19.0/lib/codemirror.js"></script>
+    <script src="http://static.savory.cn/codemirror/5.19.0/mode/xml/xml.js"></script>
+    <script src="http://static.savory.cn/codemirror/5.19.0/mode/javascript/javascript.js"></script>
+    <script src="http://static.savory.cn/codemirror/5.19.0/addon/selection/active-line.js"></script>
+
+    <!-- route -->
+    <script src="~/static/scripts/route.js"></script>
+
+    <!-- service -->
+    <script src="~/static/scripts/service/TransformService.js"></script>
+    <script src="~/static/scripts/service/TemplateService.js"></script>
+
+    <!-- controller -->
+    <script src="~/static/scripts/controller/WelcomeController.js"></script>
+    <script src="~/static/scripts/controller/TransformItemsController.js"></script>
+    <script src="~/static/scripts/controller/TransformCreateController.js"></script>
+    <script src="~/static/scripts/controller/TemplateCreateController.js"></script>
+    <script src="~/static/scripts/controller/TransformSummaryController.js"></script>
+
+    <!-- app.js -->
+    <script src="~/static/scripts/app.js"></script>
+</body>
+</html>
